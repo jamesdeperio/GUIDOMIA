@@ -1,4 +1,4 @@
-### RECORDINGS : [DRIVE](https://drive.google.com/file/d/1jEeETKmeD6CXh4O60DtA2XGRDS3rHkfT/view?usp=sharing)
+### RECORDING : [DRIVE](https://drive.google.com/file/d/1jEeETKmeD6CXh4O60DtA2XGRDS3rHkfT/view?usp=sharing)
 
 #### MVI
 - improved MVVM architecture using sealed class
