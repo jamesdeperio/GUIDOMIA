@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/tv_title"
+    android:padding="@dimen/margin_20"
+    android:gravity="start"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="@dimen/margin_5"
+    android:textFontWeight="500"
+    android:textSize="@dimen/text_18"
+    android:textColor="@color/black"
+    tools:text="This is a title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" />

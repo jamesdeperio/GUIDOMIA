@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shimmer_layout"
+    android:layout_width="match_parent"
+    android:paddingTop="@dimen/margin_24"
+    android:paddingBottom="@dimen/margin_24"
+    android:layout_height="wrap_content"
+    app:intensity="0.7">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/card"
+        android:padding="@dimen/margin_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_col1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.90" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_col2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:ellipsize="end"
+            android:foreground="@color/shimmer"
+            android:maxLines="2"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_col1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:ellipsize="end"
+            android:foreground="@color/shimmer"
+            android:maxLines="2"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_col2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

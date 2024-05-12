@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonAttr">
+        <attr name="label" format="string"/>
+        <attr name="text" format="string" />
+        <attr name="hint" format="string" />
+        <attr name="error" format="string" />
+        <attr name="widthWeight" format="float" />
+        <attr name="optional" format="boolean" />
+        <attr name="note" format="string" />
+        <attr name="textSize" format="dimension" />
+        <attr name="password" format="boolean" />
+        <attr name="spacing" format="dimension" />
+        <attr name="copyPaste" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="Topbar">
+        <attr name="accountImage" format="reference"/>
+    </declare-styleable>
+</resources>

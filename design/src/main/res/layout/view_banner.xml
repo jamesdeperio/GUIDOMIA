@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#D5D5D5">
+
+    <ImageView
+        android:clickable="false"
+        android:focusable="false"
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_stage"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <TextView
+        android:clickable="false"
+        android:focusable="false"
+        android:id="@+id/tv_title"
+        android:layout_marginEnd="@dimen/margin_36"
+        android:layout_marginStart="@dimen/margin_20"
+        android:gravity="start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_5"
+        android:textFontWeight="1000"
+        android:textSize="@dimen/text_24"
+        android:textColor="@color/white"
+        tools:text="This is a title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_description"/>
+
+    <TextView
+        android:clickable="false"
+        android:focusable="false"
+        android:id="@+id/tv_description"
+        style="@style/DialogDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_marginEnd="@dimen/margin_36"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_20"
+        tools:text="This is a description."
+        android:textFontWeight="400"
+        android:textSize="@dimen/text_18"
+        android:lineHeight="18dp"
+        android:textColor="@color/white"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/iv_image"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

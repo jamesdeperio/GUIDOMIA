@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: Verifying fastlane version" time="0.001251">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.00095">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: clean bundleDEVRelease" time="55.621334">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: cd .. &amp;&amp; java -jar bundletool-all-1.11.2.jar build-apks --bundle=app/build/outputs/bundle/DEVRelease/app-DEV-release.aab --mode=universal --output=app/build/outputs/bundle/DEVRelease/app-DEV-release.apks --ks=app/keystore/release.keystore --ks-pass=pass:androiddemo --ks-key-alias=androiddemo --key-pass=pass:androiddemo" time="5.472637">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: cd .. &amp;&amp; unzip app/build/outputs/bundle/DEVRelease/app-DEV-release.apks -d app/build/outputs/bundle/DEVRelease/" time="0.074937">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

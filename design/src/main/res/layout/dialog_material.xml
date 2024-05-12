@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="10dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_24"
+            android:layout_marginRight="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_28">
+            <LinearLayout
+                android:id="@+id/image_container"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rel_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_36"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_image_large"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:id="@+id/iv_image_small"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="true"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:layout_gravity="center"
+                    android:layout_width="250dp"
+                    app:lottie_loop="false"
+                    android:layout_height="250dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/Title"
+                android:layout_marginEnd="0dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_12"
+                tools:text="This is a title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_container" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                style="@style/DialogDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_16"
+                tools:text="This is a description."
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <Button
+                android:layout_marginHorizontal="@dimen/margin_12"
+                android:id="@+id/button_positive"
+                android:layout_width="0dp"
+                style="@style/DialogPositiveButton"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_28"
+                tools:text="Go to Device Settings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+            <Button
+                android:layout_marginHorizontal="@dimen/margin_12"
+                style="@style/DialogNegativeButton"
+                android:id="@+id/button_negative"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button_positive"
+                android:padding="@dimen/margin_16"
+                tools:text="CONTINUE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_positive"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>

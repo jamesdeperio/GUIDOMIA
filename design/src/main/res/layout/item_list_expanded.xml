@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#D5D5D5"
+    android:padding="@dimen/margin_12">
+
+    <ImageView
+        android:clickable="false"
+        android:focusable="false"
+        android:id="@+id/iv_image"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_stage"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:clickable="false"
+        android:focusable="false"
+        android:id="@+id/tv_title"
+        android:layout_marginEnd="@dimen/margin_36"
+        android:layout_marginStart="@dimen/margin_20"
+        android:gravity="start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_5"
+        android:textFontWeight="500"
+        android:textSize="@dimen/text_18"
+        android:textColor="@color/black"
+        tools:text="This is a title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_image"/>
+
+    <TextView
+        android:clickable="false"
+        android:focusable="false"
+        android:id="@+id/tv_description"
+        style="@style/DialogDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_marginEnd="@dimen/margin_36"
+        android:layout_marginStart="@dimen/margin_20"
+        tools:text="This is a description."
+        android:textFontWeight="400"
+        android:textSize="@dimen/text_12"
+        android:lineHeight="18dp"
+        android:textColor="#666666"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toEndOf="@id/iv_image"/>
+
+    <LinearLayout
+        android:clickable="false"
+        android:focusable="false"
+        android:id="@+id/view_rating_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_marginEnd="@dimen/margin_36"
+        android:layout_marginStart="@dimen/margin_20"
+        android:orientation="horizontal"
+        tools:text="This is a description."
+        android:textFontWeight="400"
+        android:textSize="@dimen/text_12"
+        android:lineHeight="18dp"
+        android:textColor="#666666"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description"
+        app:layout_constraintStart_toEndOf="@id/iv_image" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:clickable="false"
+        android:focusable="false"
+        android:id="@+id/tv_pros_cons"
+        style="@style/DialogDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_36"
+        android:layout_marginStart="@dimen/margin_15"
+        tools:text="Pros:"
+        android:textFontWeight="400"
+        android:textSize="@dimen/text_12"
+        android:lineHeight="18dp"
+        android:textColor="#666666"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_image"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

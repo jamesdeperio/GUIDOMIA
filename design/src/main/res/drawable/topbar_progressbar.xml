@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Gray background bar -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#F1EFEF"/> <!-- Gray color -->
+            <corners android:radius="20dp"/> <!-- Adjust radius as needed -->
+        </shape>
+    </item>
+    <!-- Blue fill progress -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="#6442EF"/> <!-- Blue color -->
+                <corners android:radius="20dp"/> <!-- Adjust radius as needed -->
+            </shape>
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,90 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.59.0"
+
+default_platform :android
+
+platform :android do
+
+    desc "Run all unit tests"
+    lane :test do |options|
+        gradle(task: "test" + options[:flavor] + options[:env] + options[:build_type] + "UnitTest")
+    end
+
+    desc "Build"
+    lane :build do |options|
+        env = options[:env]
+        flavor = options[:flavor]
+
+        gradle(task: "clean assemble#{env}Release")
+    end
+
+    desc "Bundle"
+    lane :bundle do |options|
+        env = options[:env]
+        flavor = options[:flavor]
+
+        gradle(
+            task: "clean bundle#{env}Release",
+            flags: "--no-daemon -Dscan --stacktrace"
+        )
+
+        keyPassword = ENV["KEY_PASSWORD"]
+        storePassword = ENV["STORE_PASSWORD"]
+
+        sh(
+        "cd .. && " +
+        "java -jar bundletool-all-1.11.2.jar build-apks " +
+        "--bundle=app/build/outputs/bundle/#{env}Release/app-#{env}-release.aab " +
+        "--mode=universal " +
+        "--output=app/build/outputs/bundle/#{env}Release/app-#{env}-release.apks " +
+        "--ks=app/keystore/release.keystore " +
+        "--ks-pass=pass:#{storePassword} " +
+        "--ks-key-alias=androiddemo " +
+        "--key-pass=pass:#{keyPassword}"
+        )
+
+        sh(
+        "cd .. && " +
+        "unzip app/build/outputs/bundle/#{env}Release/app-#{env}-release.apks " +
+        "-d app/build/outputs/bundle/#{env}Release/"
+        )
+    end
+
+
+
+
+    # You can define as many lanes as you want
+
+    after_all do |lane|
+        # This block is called, only if the executed lane was successful
+
+        # slack(
+        #   message: "Successfully deployed new App Update."
+        # )
+    end
+
+    error do |lane, exception|
+        # slack(
+        #  message: exception.message,
+        #  success: false
+        # )
+    end
+end
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://docs.fastlane.tools/actions
+
+# fastlane reports which actions are used
+# No personal data is sent or shared. Learn more at https://github.com/fastlane/enhancer

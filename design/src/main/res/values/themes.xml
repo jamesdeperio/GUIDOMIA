@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="RoundedButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/state_textbox_empty</item>
+        <!-- Add any other button attributes you want to customize -->
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="android:statusBarColor">@color/white</item>
+        <!-- Set the splash screen background, animated icon, and animation
+        duration. -->
+        <item name="windowSplashScreenBackground">@color/white</item>
+
+        <!-- Use windowSplashScreenAnimatedIcon to add a drawable or an animated
+             drawable. One of these is required.
+             -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_journey</item>
+
+        <!-- Required for animated icons. -->
+        <item name="windowSplashScreenAnimationDuration">200</item>
+
+        <!-- Set the theme of the Activity that directly follows your splash
+        screen. This is required. -->
+        <item name="postSplashScreenTheme">@style/Theme.App</item>
+    </style>
+
+
+</resources>

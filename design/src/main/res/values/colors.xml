@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- for item model -->
+    <color name="card">#FFFFFF</color>
+    <color name="page_background">#FAFAFA</color>
+    <color name="shimmer">#E2E2E2</color>
+
+    <!-- for text -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#212121</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="grey">#5A5A5A</color>
+    <color name="error">#DA1607</color>
+    <color name="orange">#FF5722</color>
+    <color name="tab_unselected">#A2A2A2</color>
+    <color name="tabline_unselected">#DCDCDC</color>
+    <color name="tab_selected">#6442EF</color>
+</resources>
