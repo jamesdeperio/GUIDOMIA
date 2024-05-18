@@ -13,3 +13,10 @@
 #### [ObjectBox](https://docs.objectbox.io/getting-started)
 - for storage
   
+##### TODO
+- convert epoxy item model to compose. (combine epoxy and compose)
+- create an activity that only uses compose.
+- add unit test using mockkito 
+
+
+
